@@ -1,0 +1,237 @@
+{
+      "CodesheetID":,
+      "CodesheetTbOrder":,
+      "IDTType": ,
+      "IDTTitle":,
+      "IDTCol": [],
+      "IDTRows": []
+}
+
+
+//Dose Table|1:
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int,
+      "IDTType": 1,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        {
+            "drugName": string (drug name),
+            "drugNonConvention": int (if 1, all dose fields will be determined by the values already in place),
+            "drugNonConventionCalculatedDose": float,
+            "drugNonConventionVolume": float,
+            "drugFlat": int (if 1 then this means the calculated dose is the same as the suggestion),
+            "drugSubScript": string,
+            "drugConcentration": float,
+            "drugConcentrationUOM": string,
+            "drugDosingSuggestion1": float,
+            "drugDosingSuggestion2": float (if only one choice then make this 0),
+            "drugDosingSuggestionCompare": float (if there is no eval put null),
+            "drugDosingSuggestionEquation": string (place the greater than, less than, etc. if there is no eval put null),
+            "drugDosingSuggestionUOM": string,
+            "drugCalculatedDoseUOM": string,
+            "drugCalculatedDoseMax": float (if null then put 0),
+            "drugCalculatedDoseMin": float (if null then put 0),
+            "drugVolumeUOM": string,
+            "drugSuggestion": string,
+            "drugInstruction": string
+          }
+      ]
+    }
+
+
+//Dose Table|1 V2:
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int,
+      "IDTType": 1,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        {
+            "drugName": string (drug name),
+            "drugFlat": int (if 1 then this means the calculated dose is the same as the suggestion),
+            "drugSubScript": string,
+            "drugConcentrationUOM": string,
+            "drugDosingSuggestionUOM": string,
+            "drugCalculatedDoseUOM": string,
+            "drugVolumeUOM": string,
+            "drugSuggestion": string,
+            "drugInstruction": string,
+            "drugConstants": {
+              "drugConcentration": float,
+              "drugInitDose":float,
+              "drugCalculatedDose":float,
+              "drugVolume":float
+            },
+            "drugProperties": [
+              {
+                "property":string,
+                "eval": string,
+                "compare": float,
+                "true": float,
+                "false": float (if there is more than one eval, mark as 0)
+              }
+            ]
+          }
+      ]
+    }
+
+//Rate Table|2:
+
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int, 
+      "IDTType": 2,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        {
+            "drugName": "string,
+            "drugSubScript": null,
+            "drugConcentrationUOM":null,
+            "drugFlowRateType": int (currently only two types),
+            "drugFRTConcentrationUOM":string (use this if flow has a weight stipulation),
+            "drugFlowRateWeightEq":string (this is used for drugs that have a flow rate based on weight, if not used leave null),
+            "drugFlowRateCompWeight":float,
+            "drugFlowRateUOM":string,
+            "drugAdministrationRate": float,
+            "drugAdministrationRateUOM": string,
+            "drugDilutionVolume": float,
+            "drugConstantConcentration": [
+              {
+                "eval": string,
+                "compare": int,
+                "true": float,
+                "false": float (if there is more than one eval, mark as 0)
+              }
+            ],
+
+            "drugSuggestion": string (this is the does string)
+          }
+      ]
+    }
+//Protocol table|3:
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int, 
+      "IDTType": 3,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        {
+            "drugName": string,
+            "drugConcentration": int,
+            "drugConcentrationUOM": string,
+            "drugDosingSuggestion1": int,
+            "drugDosingSuggestionCompare": int (This is to ask if the patient is over a certain weight, this is always filled),
+            "drugDosingSuggestionUOM": string,
+            "drugCalculatedDoseUOM": string,
+            "drugCalculatedDoseMax": int (Protocol uses the dose drug CalcDoseDrug),
+            "drugCalculatedDoseMin": 0 (this is alway 0 for the protocol),
+            "drugVolumeUOM": string,
+            "drugSuggestion": string (This is only needed in the first one and it will most likely be the max limit for a drug),
+          }
+      ]
+}
+//Protocol Table|3 V2:
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int,
+      "IDTType": 1,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        {
+            "drugName": string (drug name),
+            "drugConcentrationUOM": string,
+            "drugCalculatedDoseUOM": string,
+            "drugVolumeUOM": string,
+            "drugSuggestion": string,
+            "drugConstants": {
+              "drugConcentration": float,
+              "drugCalculatedDose":float,
+              "drugVolume":float
+            },
+            "drugIfProperties": [
+              {
+                "property":string,
+                "eval": string,
+                "compare": float,
+                "true": float,
+                "false": float (if there is more than one eval, mark as 0)
+              }
+            ]
+          }
+      ]
+    }
+//Fluid Limit|4:
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int, 
+      "IDTType": 4,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        {
+          "drugAdministrationRate": int,
+          "drugAdminRateUOM":string (make sure to fill if the units are different),
+          "drugFlowRateUOM":string,
+          "drugCalculatedDoseUOM":string,
+          "drugNonConvention": int (one or 2, if it is PICU us 2 else 1 for drugNonConventionCalculatedDose)
+        }
+      ]
+}
+//Joules|5
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int, 
+      "IDTType": 5,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        "Joules Per KG"
+        ,"Joules"
+      ],
+      "IDTRows": [
+        {
+          "drugConcentration": int,
+          "drugConcentrationUOM":string,
+          "drugCalculatedDoseUOM":string
+        }
+      ]
+    }
+//Rectal Delivery|6
+{
+      "CodesheetID":int,
+      "CodesheetTbOrder":int, 
+      "IDTType": 6,
+      "IDTTitle": string,
+      "IDTCol": [string],
+      "IDTRows": [
+        {
+          "drugName": string,
+          "drugInstruction":string (sub heading next to title of table),
+          "drugDosingSuggestion": [
+            {
+              "eval": string,
+              "compare": int,
+              "true": float,
+              "false": float (if there are more than one comparisons, leave this 0)
+            }
+          ],
+          "drugDosingSuggestionUOM":string,
+          "drugConcentration":[
+            {
+              "eval": string,
+              "compare": int,
+              "true": float,
+              "false": float (if there are more than one comparisons, leave this 0)
+            }
+          ],
+          "drugConcentrationUOM":string,
+          "drugCalculatedDoseUOM":string
+        }
+      ]
+    }

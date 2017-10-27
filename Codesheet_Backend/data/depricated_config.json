@@ -1,0 +1,607 @@
+[
+  {
+    "CodesheetID":9999,
+    "CodesheetTbOrder":0,
+    "IDTType": 991,
+    "IDTTitle": "Adenosine Protocol",
+    "IDTCol": [
+      "3 mg/ml (concentration)",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+          "drugName": "Adenosine",
+          "drugConcentrationUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugConcentration": 0.1
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 6,
+              "true": 6,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugConcentrationUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugConcentration": 0.2
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugConcentrationUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugConcentration": 0.3
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugConcentrationUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugConcentration": 0.4
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        }
+    ]
+  },
+    {
+      "CodesheetID":0,
+      "CodesheetTbOrder":1,
+      "IDTType": 1,
+      "IDTTitle": "Allergic/Anaphylactic Reactions",
+      "IDTCol": [
+        "Medication",
+        "Concentration",
+        "Dosing Suggestion",
+        "Administration Instruction",
+        "Dose",
+        "Volume"
+      ],
+      "IDTRows": [
+        {
+            "drugName": "Albuterol (neb)",
+            "drugNonConvention": 1,
+            "drugNonConventionCalculatedDose":2.5,
+            "drugNonConventionVolume":0.5,
+            "drugFlat": 1,
+            "drugSubScript": "x",
+            "drugConcentration": null,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 2.5,
+            "drugDosingSuggestion2": 0,
+            "drugDosingSuggestionCompare": null,
+            "drugDosingSuggestionEquation": null,
+            "drugDosingSuggestionUOM": "mg",
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 0,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": "nebulized Mixed with 1-2 Saline bullets",
+            "drugInstruction": null
+          },
+          {
+            "drugName": "Diphenhydramine",
+            "drugNonConvention": 0,
+            "drugNonConventionCalculatedDose":null,
+            "drugNonConventionVolume":null,
+            "drugFlat": 0,
+            "drugSubScript": "x",
+            "drugConcentration": 50,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 1,
+            "drugDosingSuggestion2": 0,
+            "drugDosingSuggestionCompare": null,
+            "drugDosingSuggestionEquation": "",
+            "drugDosingSuggestionUOM": null,
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 50,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": "IV over 2 minutes",
+            "drugInstruction": "Indications: Hives, Itching, Skin Rash, Local Skin Reaction after injection."
+          },
+          {
+            "drugName": "EPINEPHrine 1:1,000",
+            "drugNonConvention": 0,
+            "drugNonConventionCalculatedDose":null,
+            "drugNonConventionVolume":null,
+            "drugFlat": 1,
+            "drugSubScript": "C, X",
+            "drugConcentration": 1,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 0.15,
+            "drugDosingSuggestion2": 0.3,
+            "drugDosingSuggestionCompare": 30,
+            "drugDosingSuggestionEquation": "<",
+            "drugDosingSuggestionUOM": "mg",
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 0,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": "IM: anterior lateral thigh",
+            "drugInstruction": "Indications: Respiratory distress, Wheezing, Upper Airway Edema, Anaphylaxis, Bronchospasm."
+          },
+          {
+            "drugName": "Hydrocortisone",
+            "drugNonConvention": 0,
+            "drugNonConventionCalculatedDose":null,
+            "drugNonConventionVolume":null,
+            "drugFlat": 0,
+            "drugSubScript": "X",
+            "drugConcentration": 50,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 2,
+            "drugDosingSuggestion2": 0,
+            "drugDosingSuggestionCompare": null,
+            "drugDosingSuggestionEquation": "",
+            "drugDosingSuggestionUOM": null,
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 100,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": "Flush with NS, Incompatible with Heparin",
+            "drugInstruction": "Indications: Respiratory distress, Wheezing, Upper Airway Edema, Anaphylaxis, Bronchospasm."
+          }
+      ]
+    },
+    {
+      "CodesheetID":0,
+      "CodesheetTbOrder":0, 
+      "IDTType": 2,
+      "IDTTitle": "Drug Flow Rate Table",
+      "IDTCol": [
+        "Medication",
+        "Concentration",
+        "Administration Rate",
+        "Flow Rate",
+        "Dose"
+      ],
+      "IDTRows": [
+        {
+            "drugName": "DOPamine",
+            "drugNonConvention": 0,
+            "drugFlat": 0,
+            "drugSubScript": null,
+            "drugConcentrationUOM":null,
+            "drugFlowRateType": 1,
+            "drugFRTConcentrationUOM":null,
+            "drugFlowRateWeightEq":null,
+            "drugFlowRateCompWeight":null,
+            "drugFlowRateUOM":null,
+            "drugAdministrationRate": 5,
+            "drugAdministrationRateUOM": null,
+            "drugDilutionVolume": 1,
+            "drugConstantConcentration": [
+              {
+                "eval": ">",
+                "compare": 5,
+                "true": 3.2,
+                "false": 0
+              },
+              {
+                "eval": "<=",
+                "compare": 1,
+                "true": 0.8,
+                "false": 1.6
+              }
+            ],
+
+            "drugSuggestion": "2-20 mcg/kg/min",
+            "drugInstruction": null
+          }
+      ]
+    },
+    {
+      "CodesheetID":0,
+      "CodesheetTbOrder":2, 
+      "IDTType": 2,
+      "IDTTitle": "Third Table",
+      "IDTCol": [
+        "Medication",
+        "Concentration",
+        "Administration Rate",
+        "Flow Rate",
+        "Dose"
+      ],
+      "IDTRows": [
+        {
+            "drugName": "DOPamine",
+            "drugNonConvention": 0,
+            "drugFlat": 0,
+            "drugSubScript": null,
+            "drugConcentrationUOM":null,
+            "drugFlowRateType": 1,
+            "drugFRTConcentrationUOM":null,
+            "drugFlowRateWeightEq":null,
+            "drugFlowRateCompWeight":null,
+            "drugFlowRateUOM":null,
+            "drugAdministrationRate": 5,
+            "drugAdministrationRateUOM": null,
+            "drugDilutionVolume": 1,
+            "drugConstantConcentration": [
+              {
+                "eval": ">",
+                "compare": 5,
+                "true": 3.2,
+                "false": 0
+              },
+              {
+                "eval": "<=",
+                "compare": 1,
+                "true": 0.8,
+                "false": 1.6
+              }
+            ],
+
+            "drugSuggestion": "2-20 mcg/kg/min",
+            "drugInstruction": null
+          }
+      ]
+    },
+    {
+      "CodesheetID":1,
+      "CodesheetTbOrder":0, 
+      "IDTType": 2,
+      "IDTTitle": "table not in codesheet",
+      "IDTCol": [
+        "Medication",
+        "Concentration",
+        "Administration Rate",
+        "Flow Rate",
+        "Dose"
+      ],
+      "IDTRows": [
+        {
+            "drugName": "DOPamine",
+            "drugNonConvention": 0,
+            "drugFlat": 0,
+            "drugSubScript": null,
+            "drugConcentrationUOM":null,
+            "drugFlowRateType": 1,
+            "drugFRTConcentrationUOM":null,
+            "drugFlowRateWeightEq":null,
+            "drugFlowRateCompWeight":null,
+            "drugFlowRateUOM":null,
+            "drugAdministrationRate": 5,
+            "drugAdministrationRateUOM": null,
+            "drugDilutionVolume": 1,
+            "drugConstantConcentration": [
+              {
+                "eval": ">",
+                "compare": 5,
+                "true": 3.2,
+                "false": 0
+              },
+              {
+                "eval": "<=",
+                "compare": 1,
+                "true": 0.8,
+                "false": 1.6
+              }
+            ],
+
+            "drugSuggestion": "2-20 mcg/kg/min",
+            "drugInstruction": null
+          }
+      ]
+    },
+    {
+      "CodesheetID":3,
+      "CodesheetTbOrder":1,
+      "IDTType": 3,
+      "IDTTitle": "Protocol",
+      "IDTCol": [
+        "Adenosine Protocol",
+        "3 mg/ml (concentration)", 
+        "Dose", 
+        "Volume"
+      ],
+      "IDTRows": [
+        {
+            "drugName": "Adenosine",
+            "drugNonConvention": null,
+            "drugNonConventionCalculatedDose":null,
+            "drugNonConventionVolume":null,
+            "drugFlat": null,
+            "drugSubScript": null,
+            "drugConcentration": 3,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 0.1,
+            "drugDosingSuggestion2": 0,
+            "drugDosingSuggestionCompare": 29,
+            "drugDosingSuggestionEquation": null,
+            "drugDosingSuggestionUOM": null,
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 12,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": "Max dose = 12 mg",
+            "drugInstruction": null
+          },
+          {
+            "drugName": "Adenosine",
+            "drugNonConvention": null,
+            "drugNonConventionCalculatedDose":null,
+            "drugNonConventionVolume":null,
+            "drugFlat": null,
+            "drugSubScript": null,
+            "drugConcentration": 3,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 0.2,
+            "drugDosingSuggestion2": 0,
+            "drugDosingSuggestionCompare": 29,
+            "drugDosingSuggestionEquation": null,
+            "drugDosingSuggestionUOM": null,
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 12,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": null,
+            "drugInstruction": null
+          },
+          {
+            "drugName": "Adenosine",
+            "drugNonConvention": null,
+            "drugNonConventionCalculatedDose":null,
+            "drugNonConventionVolume":null,
+            "drugFlat": null,
+            "drugSubScript": null,
+            "drugConcentration": 3,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 0.3,
+            "drugDosingSuggestion2": 0,
+            "drugDosingSuggestionCompare": 29,
+            "drugDosingSuggestionEquation": null,
+            "drugDosingSuggestionUOM": null,
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 12,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": "Max dose = 12 mg",
+            "drugInstruction": null
+          },
+          {
+            "drugName": "Adenosine",
+            "drugNonConvention": null,
+            "drugNonConventionCalculatedDose":null,
+            "drugNonConventionVolume":null,
+            "drugFlat": null,
+            "drugSubScript": null,
+            "drugConcentration": 3,
+            "drugConcentrationUOM": null,
+            "drugDosingSuggestion1": 0.4,
+            "drugDosingSuggestion2": 0,
+            "drugDosingSuggestionCompare": 29,
+            "drugDosingSuggestionEquation": null,
+            "drugDosingSuggestionUOM": null,
+            "drugCalculatedDoseUOM": null,
+            "drugCalculatedDoseMax": 12,
+            "drugCalculatedDoseMin": 0,
+            "drugVolumeUOM": null,
+            "drugSuggestion": "Max dose = 12 mg",
+            "drugInstruction": null
+          }
+      ]
+    },
+    {
+      "CodesheetID":4,
+      "CodesheetTbOrder":0,
+      "IDTType": 4,
+      "IDTTitle": "FLUID LIMIT",
+      "IDTCol": [
+        "Limit Per Day"
+        ,"Limit Per Hour"
+      ],
+      "IDTRows": [
+        {
+          "drugAdministrationRate": 80,
+          "drugAdminRateUOM":"ml/kg/day",
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 1
+        },
+        {
+          "drugAdministrationRate": 100,
+          "drugAdminRateUOM":"ml/kg/day",
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 1
+        },
+        {
+          "drugAdministrationRate": 120,
+          "drugAdminRateUOM":"ml/kg/day",
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 1
+        },
+        {
+          "drugAdministrationRate": 140,
+          "drugAdminRateUOM":"ml/kg/day",
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 1
+        },
+        {
+          "drugAdministrationRate": 150,
+          "drugAdminRateUOM":"ml/kg/day",
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 1
+        }
+      ]
+    },
+    {
+      "CodesheetID":5,
+      "CodesheetTbOrder":0,
+      "IDTType": 4,
+      "IDTTitle": "FLUID LIMIT",
+      "IDTCol": [
+        "Limit Per Day"
+        ,"Limit Per Hour"
+      ],
+      "IDTRows": [
+        {
+          "drugAdministrationRate": 500,
+          "drugAdminRateUOM":null,
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 2
+        },
+        {
+          "drugAdministrationRate": 1000,
+          "drugAdminRateUOM":null,
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 2
+        },
+        {
+          "drugAdministrationRate": 1200,
+          "drugAdminRateUOM":null,
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 2
+        },
+        {
+          "drugAdministrationRate": 1500,
+          "drugAdminRateUOM":null,
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 2
+        },
+        {
+          "drugAdministrationRate": 2000,
+          "drugAdminRateUOM":null,
+          "drugFlowRateUOM":null,
+          "drugCalculatedDoseUOM":null,
+          "drugNonConvention": 2
+        }
+      ]
+    },
+    {
+      "CodesheetID":6,
+      "CodesheetTbOrder":0,
+      "IDTType": 5,
+      "IDTTitle": "Defibrillation",
+      "IDTCol": [
+        "Joules Per KG"
+        ,"Joules"
+      ],
+      "IDTRows": [
+        {
+          "drugConcentration": 2,
+          "drugConcentrationUOM":null,
+          "drugCalculatedDoseUOM":"joules/kg; double dose if ineffective"
+        }
+      ]
+    },
+    {
+      "CodesheetID":6,
+      "CodesheetTbOrder":1,
+      "IDTType": 5,
+      "IDTTitle": "Cardioversion",
+      "IDTCol": [
+        "Joules Per KG"
+        ,"Joules"
+      ],
+      "IDTRows": [
+        {
+          "drugConcentration": 0.5,
+          "drugConcentrationUOM":null,
+          "drugCalculatedDoseUOM":null
+        },
+        {
+          "drugConcentration": 1,
+          "drugConcentrationUOM":null,
+          "drugCalculatedDoseUOM":null
+        }
+      ]
+    },
+    {
+      "CodesheetID":7,
+      "CodesheetTbOrder":0,
+      "IDTType": 6,
+      "IDTTitle": "Diastat Dosing",
+      "IDTCol": [],
+      "IDTRows": [
+        {
+          "drugName": "Diastat Rectal Gel",
+          "drugInstruction":"(if no IV access)",
+          "drugDosingSuggestion": [
+            {
+              "eval": "<",
+              "compare": 6,
+              "true": 0.5,
+              "false": 0
+            },
+            {
+              "eval": ">",
+              "compare":11,
+              "true": 0.2,
+              "false": 0.3
+            }
+          ],
+          "drugDosingSuggestionUOM":null,
+          "drugConcentration":[
+            {
+              "eval": "<",
+              "compare": 3,
+              "true": 2.5,
+              "false": 0
+            },
+            {
+              "eval": ">",
+              "compare":12,
+              "true": 20,
+              "false": 10
+            }
+          ],
+          "drugConcentrationUOM":null,
+          "drugCalculatedDoseUOM":null
+        }
+      ]
+    }
+  ]

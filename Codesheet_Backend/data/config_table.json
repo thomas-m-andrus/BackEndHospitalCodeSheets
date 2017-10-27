@@ -1,0 +1,2945 @@
+[
+  {
+    "CodesheetID": 1,
+    "CodesheetTbOrder": 0,
+    "IDTType": 1,
+    "IDTTitle": "Allergic/Anaphylactic Reactions Table: 1",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Albuterol(neb)",
+        "drugFlat": 1,
+        "drugSubScript": "X ",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": "mg",
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "nebulized; Mixed with 1-2 Saline bullets",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": null,
+          "drugInitDose": 2.5,
+          "drugCalculatedDose": 2.5,
+          "drugVolume": 0.5
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Diphenhydramine",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "IV over 2 minutes",
+        "drugInstruction": "Indications: Hives, Itching, Skin Rash, Local Skin Reaction after injection.",
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 50,
+            "true": 50,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "EPINEPHrine 1:1,000",
+        "drugFlat": 1,
+        "drugSubScript": "C, X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": "mg",
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "IM: anterior lateral thigh",
+        "drugInstruction": "Indications: Respiratory distress, Wheezing, Upper Airway Edema, Anaphylaxis, Bronchospasm.",
+        "drugConstants": {
+          "drugConcentration": 1,
+          "drugCalculatedDose": 0.3
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugInitDose",
+            "eval": "<",
+            "compare": 30,
+            "true": 0.15,
+            "false": 0.3
+          }
+        ]
+      },
+      {
+        "drugName": "Hydrocortisone",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Flush with NS; Incompatible with Heparin",
+        "drugInstruction": "Indications: Persistent Allergic Symptomatology (after Diphenhydramine or EPINEPHrine)",
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 100,
+            "true": 100,
+            "false": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CodesheetID": 2,
+    "CodesheetTbOrder": 0,
+    "IDTType": 6,
+    "IDTTitle": "Diastat Dosing",
+    "IDTCol": [],
+    "IDTRows": [
+      {
+        "drugName": "Diastat Rectal Gel",
+        "drugInstruction": "(if no IV access)",
+        "drugDosingSuggestion": [
+          {
+            "eval": "<",
+            "compare": 6,
+            "true": 0.5,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 11,
+            "true": 0.2,
+            "false": 0.3
+          }
+        ],
+        "drugDosingSuggestionUOM": null,
+        "drugConcentration": [
+          {
+            "eval": "<",
+            "compare": 3,
+            "true": 2.5,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 12,
+            "true": 20,
+            "false": 10
+          }
+        ],
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": null
+      }
+    ]
+  },
+  {
+    "CodesheetID": 2,
+    "CodesheetTbOrder": 1,
+    "IDTType": 1,
+    "IDTTitle": "Pediatric Seizure Drug Dosing Table: 2",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Lorazepam",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Infuse over 2 min",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 2,
+          "drugInitDose": 0.1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 4,
+            "true": 4,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Fosphenytoin (Loading dose)",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": "mg PE/mL",
+        "drugDosingSuggestionUOM": "mg PE/kg",
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Infuse over 10 min",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1500,
+            "true": 1500,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Fosphenytoin",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": "mg PE/mL",
+        "drugDosingSuggestionUOM": "mg PE/kg",
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Infuse over 5 min",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 10
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1500,
+            "true": 1500,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Phenobarbital (Loading Dose)",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Infuse over 20 min",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 130,
+          "drugInitDose": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2000,
+            "true": 2000,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Phenobarbital",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Infuse over 10 min",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 130,
+          "drugInitDose": 10
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2000,
+            "true": 2000,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Valproate",
+        "drugFlat": 0,
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Infuse over 5 min",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 15
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2000,
+            "true": 2000,
+            "false": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CodesheetID": 2,
+    "CodesheetTbOrder": 2,
+    "IDTType": 1,
+    "IDTTitle": "Rapid Sequence Intubation Table: 3",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Atropine (Optional)",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01-0.03 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.02
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 0.5,
+            "true": 0.5,
+            "false": 0
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": "<",
+            "compare": 0.1,
+            "true": 0.1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Lidocaine (Optional)",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Etomidate",
+        "drugFlat": 0,
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 2,
+          "drugInitDose": 0.2
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Ketamine",
+        "drugFlat": 0,
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 100,
+            "true": 100,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Succinylcholine",
+        "drugFlat": 0,
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "max 2 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugInitDose",
+            "eval": ">",
+            "compare": 39.999,
+            "true": 1,
+            "false": 2
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 150,
+            "true": 150,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Rocuronium",
+        "drugFlat": 0,
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      }
+    ]
+  },
+  {
+    "CodesheetID":3,
+    "CodesheetTbOrder":0,
+    "IDTType": 4,
+    "IDTTitle": "FLUID LIMIT",
+    "IDTCol": [
+      "Limit Per Day"
+      ,"Limit Per Hour"
+    ],
+    "IDTRows": [
+      {
+        "drugAdministrationRate": 500,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 2
+      },
+      {
+        "drugAdministrationRate": 1000,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 2
+      },
+      {
+        "drugAdministrationRate": 1200,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 2
+      },
+      {
+        "drugAdministrationRate": 1500,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 2
+      },
+      {
+        "drugAdministrationRate": 2000,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 2
+      }
+    ]
+  },
+  {
+    "CodesheetID": 3,
+    "CodesheetTbOrder": 1,
+    "IDTType": 5,
+    "IDTTitle": "Defibrillation",
+    "IDTCol": [
+      "Joules Per KG",
+      "Joules"
+    ],
+    "IDTRows": [
+      {
+        "drugConcentration": 2,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": "joules/kg; double dose if ineffective"
+      }
+    ]
+  },
+  {
+    "CodesheetID": 3,
+    "CodesheetTbOrder": 2,
+    "IDTType": 5,
+    "IDTTitle": "Cardioversion",
+    "IDTCol": [
+      "Joules Per KG",
+      "Joules"
+    ],
+    "IDTRows": [
+      {
+        "drugConcentration": 0.5,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": null
+      },
+      {
+        "drugConcentration": 1,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": null
+      }
+    ]
+  },
+  {
+    "CodesheetID": 3,
+    "CodesheetTbOrder": 3,
+    "IDTType": 1,
+    "IDTTitle": "Emergency Drug Reference Table: 4",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Atropine",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01-0.03 mg/kg; May repeat q 3-5 min.",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.02
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 0.5,
+            "true": 0.5,
+            "false": 0
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": "<",
+            "compare": 0.1,
+            "true": 0.1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Amiodarone",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Use a 0.22 micron filter",
+        "drugInstruction": "Infuse over 10 min",
+        "drugConstants": {
+          "drugConcentration": 1.8,
+          "drugInitDose": 5
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 300,
+            "true": 300,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Calcium Gluconate 10%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max Dose 1 Gm; 100-200 mg/kg Slow IVP",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 100,
+          "drugInitDose": 100
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1000,
+            "true": 1000,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Dextrose 10%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": "Gm/mL",
+        "drugDosingSuggestionUOM": "Gm/kg",
+        "drugCalculatedDoseUOM": "Gm",
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 0.5
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 25,
+            "true": 25,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "EPINEPHrine 1:10,000 (standard dose)",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "May repeat q 3-5 min.",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 0.01
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1,
+            "true": 1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Flumazenil",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01 - 0.02 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 0.01
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 0.2,
+            "true": 0.2,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Fosphenytoin",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": "mg PE/mL",
+        "drugDosingSuggestionUOM": "mg PE/kg",
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": " Max total dose= 30 mg/kg",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1500,
+            "true": 1500,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Hydrocortisone",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 100,
+            "true": 100,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Lidocaine 1%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "1 - 1.5 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Lorazepam",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.04 -0.1 mg/kg",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 2,
+          "drugInitDose": 0.05
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 4,
+            "true": 4,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Mannitol 20%(bag)",
+        "drugFlat": 0,
+        "drugSubScript": "C ",
+        "drugConcentrationUOM": "gm/mL",
+        "drugDosingSuggestionUOM": "gm/kg",
+        "drugCalculatedDoseUOM": "gm",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.25-1 gm/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.2,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Naloxone",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01 - 0.1 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.01
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2,
+            "true": 2,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "PHENobarbital",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max total dose= 30 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 130,
+          "drugInitDose": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1500,
+            "true": 1500,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Sodium Bicarbonate 8.4%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": "mEq/mL",
+        "drugDosingSuggestionUOM": "mEq/kg",
+        "drugCalculatedDoseUOM": "mEq",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.5-2 mEq/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugInitDose": 1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugConcentration",
+            "eval": "<",
+            "compare": 10,
+            "true": 0.5,
+            "false": 1
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 50,
+            "true": 50,
+            "false": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CodesheetID": 3,
+    "CodesheetTbOrder": 4,
+    "IDTType": 1,
+    "IDTTitle": "Rapid Sequence Intubation Table: 5",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Atropine",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01-0.03 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugInitDose": 0.02
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 0.5,
+            "true": 0.5,
+            "false": 0
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": "<",
+            "compare": 0.1,
+            "true": 0.1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Lidocaine",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Etomidate",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 2,
+          "drugInitDose": 0.2
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Ketamine",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 100,
+            "true": 100,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Succinylcholine",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max 3 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugInitDose",
+            "eval": "<",
+            "compare": 10,
+            "true": 3,
+            "false": 2
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 150,
+            "true": 150,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Rocuronium",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      }
+    ]
+  },
+  {
+    "CodesheetID": 3,
+    "CodesheetTbOrder": 5,
+    "IDTType": 2,
+    "IDTTitle": "Emergency Rate Table Reference Table: 6",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Administration Rate",
+      "Flow Rate",
+      "Dose"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "DOPamine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": "mL/hr ",
+        "drugAdministrationRate": 5,
+        "drugAdministrationRateUOM": null,
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 3.2,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 0.8,
+            "false": 1.6
+          }
+        ],
+        "drugSuggestion": "2-20 mcg/kg/min"
+      },
+      {
+        "drugName": "DOBUTamine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 5,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 4,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 1,
+            "false": 2
+          }
+        ],
+        "drugSuggestion": "2 - 20 mcg/kg/min"
+      },
+      {
+        "drugName": "Isoproterenol",
+        "drugSubScript": null,
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 0.05,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 0.01,
+            "false": 0.02
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "EPINEPHrine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1.5,
+            "true": 0.01,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 20,
+            "true": 0.12,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 0.02,
+            "false": 0.05
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "NORepinephrine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1.5,
+            "true": 0.01,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 20,
+            "true": 0.12,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 0.02,
+            "false": 0.05
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "PHENYLephrine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1.5,
+            "true": 0.01,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 20,
+            "true": 0.12,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 0.02,
+            "false": 0.05
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "Terbutaline",
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 2,
+        "drugFRTConcentrationUOM": "mcg/ml",
+        "drugFlowRateWeightEq": ">",
+        "drugFlowRateCompWeight": 5,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.2,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 1,
+            "false": 100
+          }
+        ],
+        "drugSuggestion": "0.1 - 6 mcg/kg/min"
+      },
+      {
+        "drugName": "Lidocaine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 20,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 0,
+            "true": 8,
+            "false": 0
+          }
+        ],
+        "drugSuggestion": "10 - 50 mcg/kg/min"
+      }
+    ]
+  },
+  {
+    "CodesheetID":3,
+    "CodesheetTbOrder":6,
+    "IDTType": 3,
+    "IDTTitle": "Adenosine Protocol",
+    "IDTCol": [
+      "3 mg/ml (concentration)",
+      "Dosing Suggestion",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.1
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 6,
+              "true": 6,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.2
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.3
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.4
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        }
+    ]
+  },
+  {
+    "CodesheetID": 3,
+    "CodesheetTbOrder": 7,
+    "IDTType": 1,
+    "IDTTitle": "Endotracheal Tube Dosing Table: 8",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Bolus",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Atropine",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max dose = 2 mg; 0.04 - 0.06 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose":0.04
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1.00,
+            "true": 1.00,
+            "false": 0
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": "<",
+            "compare": 0.1,
+            "true": 0.1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "EPINEPHrine 1:1,000",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 1,
+          "drugInitDose": 0.1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2.5,
+            "true": 2.5,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Lidocaine 1%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "2 - 3 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Naloxone",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max dose = 2 mg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.02
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2,
+            "true": 2,
+            "false": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CodesheetID":4,
+    "CodesheetTbOrder":0,
+    "IDTType": 4,
+    "IDTTitle": "FLUID LIMIT",
+    "IDTCol": [
+      "Limit Per Day"
+      ,"Limit Per Hour"
+    ],
+    "IDTRows": [
+      {
+        "drugAdministrationRate": 80,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 1
+      },
+      {
+        "drugAdministrationRate": 100,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 1
+      },
+      {
+        "drugAdministrationRate": 120,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 1
+      },
+      {
+        "drugAdministrationRate": 140,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 1
+      },
+      {
+        "drugAdministrationRate": 150,
+        "drugAdminRateUOM":null,
+        "drugFlowRateUOM":null,
+        "drugCalculatedDoseUOM":null,
+        "drugNonConvention": 1
+      }
+    ]
+  },
+  {
+    "CodesheetID": 4,
+    "CodesheetTbOrder": 1,
+    "IDTType": 5,
+    "IDTTitle": "Defibrillation",
+    "IDTCol": [
+      "Joules Per KG",
+      "Joules"
+    ],
+    "IDTRows": [
+      {
+        "drugConcentration": 2,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": "joules/kg; double dose if ineffective"
+      }
+    ]
+  },
+  {
+    "CodesheetID": 4,
+    "CodesheetTbOrder": 2,
+    "IDTType": 5,
+    "IDTTitle": "Cardioversion",
+    "IDTCol": [
+      "Joules Per KG",
+      "Joules"
+    ],
+    "IDTRows": [
+      {
+        "drugConcentration": 0.5,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": null
+      },
+      {
+        "drugConcentration": 1,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": null
+      }
+    ]
+  },
+  {
+    "CodesheetID": 4,
+    "CodesheetTbOrder": 3,
+    "IDTType": 1,
+    "IDTTitle": "Neonatal Emergency Drug Reference Table : 4",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Atropine",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01-0.03 mg/kg",
+        "drugInstruction": "May repeat q 3-5 minutes",
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.02
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2,
+            "true": 2,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Calcium Gluconate 10%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Slow IVP",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 100,
+          "drugInitDose": 100
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1000,
+            "true": 1000,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Dextrose 10%",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": "Gm/mL",
+        "drugDosingSuggestionUOM": "mL/kg",
+        "drugCalculatedDoseUOM": "Gm",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.2-1 Gm/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "EPINEPHrine 1:10,000",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Range 0.01-0.03 mg/kg; May repeat q 3-5 minutes",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 0.01
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1,
+            "true": 1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Lidocaine 1%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "1 - 2 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Lorazepam",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": "mL ***",
+        "drugSuggestion": "0.04 -0.1 mg/kg",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 2,
+          "drugInitDose": 0.1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 4,
+            "true": 4,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Naloxone",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01 - 0.1 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.01
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2,
+            "true": 2,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "PHENobarbital",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max total dose= 40 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 130,
+          "drugInitDose": 20
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Sodium Bicarbonate 4.2%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": "mEq/mL",
+        "drugDosingSuggestionUOM": "mEq/kg",
+        "drugCalculatedDoseUOM": "mEq",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.5-2 mEq/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugInitDose": 1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugConcentration",
+            "eval": "<=",
+            "compare": 10,
+            "true": 0.5,
+            "false": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "CodesheetID": 4,
+    "CodesheetTbOrder": 4,
+    "IDTType": 2,
+    "IDTTitle": "NICU Flow Rate Table: 5",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Administration Rate",
+      "Flow Rate",
+      "Dose"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "DOPamine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 5,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 0.8,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 1.6,
+            "false": 3.2
+          }
+        ],
+        "drugSuggestion": "2 - 20 mcg/kg/min"
+      },
+      {
+        "drugName": "DOBUTamine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 5,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 1,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 2,
+            "false": 4
+          }
+        ],
+        "drugSuggestion": "2 - 20 mcg/kg/min"
+      },
+      {
+        "drugName": "EPINEPHrine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1.5,
+            "true": 0.01,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 0.02,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 20,
+            "true": 0.05,
+            "false": 0.12
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "Prostaglandin E1 (Alprostadil)",
+        "drugSubScript": "P",
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.05,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 0,
+            "true": 0.005,
+            "false": 0
+          }
+        ],
+        "drugSuggestion": "0.025 - 0.1  mcg/kg/min"
+      }
+    ]
+  },
+  {
+    "CodesheetID":4,
+    "CodesheetTbOrder":5,
+    "IDTType": 3,
+    "IDTTitle": "Adenosine Protocol",
+    "IDTCol": [
+      "3 mg/ml (concentration)",
+      "Dosing Suggestion",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.1
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.2
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        }
+    ]
+  },
+  {
+    "CodesheetID": 4,
+    "CodesheetTbOrder": 6,
+    "IDTType": 1,
+    "IDTTitle": "Endotracheal Tube Dosing Table: 7",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Atropine",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2,
+            "true": 2,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "EPINEPHrine 1:10,000",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 0.1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1,
+            "true": 1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Lidocaine 1%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugInitDose": 2
+        },
+        "drugIfProperties": []
+      }
+    ]
+  },
+  {
+    "CodesheetID": 4,
+    "CodesheetTbOrder": 7,
+    "IDTType": 1,
+    "IDTTitle": "Sedation Table: 8",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Bolus",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Morphine (IV,IM)",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Consider 0.05 mg/kg; for babies <1 kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.5,
+          "drugInitDose": 0.1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Fentanyl IV",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": "mcg/mL",
+        "drugDosingSuggestionUOM": "mcg/kg",
+        "drugCalculatedDoseUOM": "mcg",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "1-2 mcg/kg; Infuse over 2-3 min",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 4,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Midazolam IV",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": "mcg/kg",
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Consider 50 mcg/kg; for babies <1 kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 1,
+          "drugInitDose": 100
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Intranasal Midazolam",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": "mcg/kg",
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "200-300 mcg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 5,
+          "drugInitDose": 200
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Intranasal Fentanyl",
+        "drugFlat": 0,
+        "drugSubScript": "X",
+        "drugConcentrationUOM": "mcg/mL",
+        "drugDosingSuggestionUOM": "mcg/kg",
+        "drugCalculatedDoseUOM": "mcg",
+        "drugVolumeUOM": null,
+        "drugSuggestion": " ",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": []
+      }
+    ]
+  },
+  {
+    "CodesheetID": 5,
+    "CodesheetTbOrder": 0,
+    "IDTType": 5,
+    "IDTTitle": "Defibrillation",
+    "IDTCol": [
+      "Joules Per KG",
+      "Joules"
+    ],
+    "IDTRows": [
+      {
+        "drugConcentration": 2,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": "joules/kg; double dose if ineffective"
+      }
+    ]
+  },
+  {
+    "CodesheetID": 5,
+    "CodesheetTbOrder": 1,
+    "IDTType": 5,
+    "IDTTitle": "Cardioversion",
+    "IDTCol": [
+      "Joules Per KG",
+      "Joules"
+    ],
+    "IDTRows": [
+      {
+        "drugConcentration": 0.5,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": null
+      },
+      {
+        "drugConcentration": 1,
+        "drugConcentrationUOM": null,
+        "drugCalculatedDoseUOM": null
+      }
+    ]
+  },
+  {
+    "CodesheetID": 5,
+    "CodesheetTbOrder": 2,
+    "IDTType": 1,
+    "IDTTitle": "OR Dosing Table: 3",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Dosing Suggestion",
+      "Administration Instruction",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "Atropine",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01-0.03 mg/kg; May repeat q 3-5 min.",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.02
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 0.5,
+            "true": 0.5,
+            "false": 0
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": "<",
+            "compare": 0.1,
+            "true": 0.1,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Amiodarone",
+        "drugFlat": 0,
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Use a 0.22 micron filter",
+        "drugInstruction": "Infuse over 10 min",
+        "drugConstants": {
+          "drugConcentration": 1.8,
+          "drugInitDose": 5
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 300,
+            "true": 300,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Calcium Gluconate 10%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "100-200 mg/kg Slow IVP",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 100,
+          "drugInitDose": 100
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1000,
+            "true": 1000,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Dextrose 10%",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": "Gm/mL",
+        "drugDosingSuggestionUOM": "Gm/kg",
+        "drugCalculatedDoseUOM": "Gm",
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 0.5
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 25,
+            "true": 25,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "EPINEPHrine 1:10,000",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": "mcg/mL",
+        "drugDosingSuggestionUOM": "mcg/kg",
+        "drugCalculatedDoseUOM": "mcg",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "May repeat q 3-5 min.",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 100,
+          "drugInitDose": 10
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1000,
+            "true": 1000,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Flumazenil",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01 - 0.02 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.1,
+          "drugInitDose": 0.01
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 0.2,
+            "true": 0.2,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Fosphenytoin",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max total dose= 30 mg/kg",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1500,
+            "true": 1500,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Hydrocortisone",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 50,
+          "drugInitDose": 2
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 100,
+            "true": 100,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Insin  (Regular)",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": "units/mL",
+        "drugDosingSuggestionUOM": "units/kg",
+        "drugCalculatedDoseUOM": "units",
+        "drugVolumeUOM": null,
+        "drugSuggestion": null,
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 100,
+          "drugInitDose": 0.1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Lidocaine 1%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "1 - 1.5 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 10,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Lorazepam",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.04 -0.1 mg/kg",
+        "drugInstruction": "Dilute |REPLACE| mLs of |REPLACE| in |REPLACE| mLs of NS.  Administer |REPLACE| mLs.",
+        "drugConstants": {
+          "drugConcentration": 2,
+          "drugInitDose": 0.1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 4,
+            "true": 4,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Mannitol 25%",
+        "drugFlat": 0,
+        "drugSubScript": "C ",
+        "drugConcentrationUOM": "gm/mL",
+        "drugDosingSuggestionUOM": "gm/kg",
+        "drugCalculatedDoseUOM": "gm",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.25-1 gm/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.25,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": []
+      },
+      {
+        "drugName": "Naloxone",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.01 - 0.1 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 0.01
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 2,
+            "true": 2,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "PHENobarbital",
+        "drugFlat": 0,
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugDosingSuggestionUOM": null,
+        "drugCalculatedDoseUOM": null,
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Max total dose= 30 mg/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 130,
+          "drugInitDose": 20
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 1500,
+            "true": 1500,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Potassium Chloride",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": "mEq/mL",
+        "drugDosingSuggestionUOM": "mEq/kg",
+        "drugCalculatedDoseUOM": "mEq",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "Infuse over 2 hours; Obtain order sheet from RX",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugConcentration": 0.4,
+          "drugInitDose": 1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 20,
+            "true": 20,
+            "false": 0
+          }
+        ]
+      },
+      {
+        "drugName": "Sodium Bicarbonate 4.2%",
+        "drugFlat": 0,
+        "drugSubScript": "C",
+        "drugConcentrationUOM": "mEq/mL",
+        "drugDosingSuggestionUOM": "mEq/kg",
+        "drugCalculatedDoseUOM": "mEq",
+        "drugVolumeUOM": null,
+        "drugSuggestion": "0.5-2 mEq/kg",
+        "drugInstruction": null,
+        "drugConstants": {
+          "drugInitDose": 1
+        },
+        "drugIfProperties": [
+          {
+            "property": "drugConcentration",
+            "eval": "<",
+            "compare": 10,
+            "true": 0.5,
+            "false": 1
+          },
+          {
+            "property": "drugCalculatedDose",
+            "eval": ">",
+            "compare": 50,
+            "true": 50,
+            "false": 0
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "CodesheetID":5,
+    "CodesheetTbOrder":3,
+    "IDTType": 3,
+    "IDTTitle": "Adenosine Protocol",
+    "IDTCol": [
+      "3 mg/ml (concentration)",
+      "Dosing Suggestion",
+      "Dose",
+      "Volume"
+    ],
+    "IDTRows": [
+      {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.1
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 6,
+              "true": 6,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.2
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.3
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        },
+        {
+          "drugName": "Adenosine",
+          "drugInitDoseUOM": null,
+          "drugCalculatedDoseUOM": null,
+          "drugVolumeUOM": null,
+          "drugSuggestion": null,
+          "drugConstants": {
+            "drugInitDose": 0.4
+          },
+          "drugIfProperties": [
+            {
+              "property":"drugCalculatedDose",
+              "eval": ">",
+              "compare": 12,
+              "true": 12,
+              "false":0
+            }
+          ]
+        }
+    ]
+  },
+
+  {
+    "CodesheetID": 5,
+    "CodesheetTbOrder": 4,
+    "IDTType": 2,
+    "IDTTitle": "OR Rate Table: 5",
+    "IDTCol": [
+      "Medication",
+      "Concentration",
+      "Administration Rate",
+      "Flow Rate",
+      "Dose"
+    ],
+    "IDTRows": [
+      {
+        "drugName": "DOPamine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": "mL/hr ",
+        "drugAdministrationRate": 5,
+        "drugAdministrationRateUOM": null,
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 3.2,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 0.8,
+            "false": 1.6
+          }
+        ],
+        "drugSuggestion": "2-20 mcg/kg/min"
+      },
+      {
+        "drugName": "DOBUTamine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 5,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 4,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 1,
+            "false": 2
+          }
+        ],
+        "drugSuggestion": "2 - 20 mcg/kg/min"
+      },
+      {
+        "drugName": "Isoproterenol",
+        "drugSubScript": "C",
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 0.05,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 1,
+            "true": 0.01,
+            "false": 0.02
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "EPINEPHrine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1.5,
+            "true": 0.01,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 20,
+            "true": 0.12,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 0.02,
+            "false": 0.05
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "Esmolol",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 100,
+        "drugAdministrationRateUOM": null,
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 0,
+            "true": 10,
+            "false": 0
+          }
+        ],
+        "drugSuggestion": "50-500 mcg/kg/min"
+      },
+      {
+        "drugName": "Lidocaine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 20,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 0,
+            "true": 8,
+            "false": 0
+          }
+        ],
+        "drugSuggestion": "10 - 50 mcg/kg/min"
+      },
+      {
+        "drugName": "Nitroprusside",
+        "drugSubScript": "P",
+        "drugConcentrationUOM": null,
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 1,
+        "drugAdministrationRateUOM": null,
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": ">",
+            "compare": 5,
+            "true": 1,
+            "false": 0.5
+          }
+        ],
+        "drugSuggestion": "0.5-10 mcg/kg/min"
+      },
+      {
+        "drugName": "NORepinephrine",
+        "drugSubScript": null,
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1.5,
+            "true": 0.01,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 20,
+            "true": 0.12,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 0.02,
+            "false": 0.05
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "PHENYLephrine",
+        "drugSubScript": "P",
+        "drugConcentrationUOM": "mcg/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.1,
+        "drugAdministrationRateUOM": "mcg/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<=",
+            "compare": 1.5,
+            "true": 0.01,
+            "false": 0
+          },
+          {
+            "eval": ">",
+            "compare": 20,
+            "true": 0.12,
+            "false": 0
+          },
+          {
+            "eval": "<=",
+            "compare": 5,
+            "true": 0.02,
+            "false": 0.05
+          }
+        ],
+        "drugSuggestion": "0.05 - 2  mcg/kg/min"
+      },
+      {
+        "drugName": "Vasopressin",
+        "drugSubScript": "P",
+        "drugConcentrationUOM": "unit/mL",
+        "drugFlowRateType": 1,
+        "drugFRTConcentrationUOM": null,
+        "drugFlowRateWeightEq": null,
+        "drugFlowRateCompWeight": null,
+        "drugFlowRateUOM": null,
+        "drugAdministrationRate": 0.3,
+        "drugAdministrationRateUOM": "mUnit/kg/min",
+        "drugDilutionVolume": 1,
+        "drugConstantConcentration": [
+          {
+            "eval": "<",
+            "compare": 10.1,
+            "true": 0.5,
+            "false": 1
+          }
+        ],
+        "drugSuggestion": "0.3-2 mUnit/kg/min"
+      }
+    ]
+  }
+]
