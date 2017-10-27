@@ -28,4 +28,11 @@ module.exports = function(app){
         ret = cod_comp.convertSheetDBtoWeb(test_tables,index,weight,height,age);
         res.send(ret);
     })
+
+    app.get('/apitest',(req,res)=>{
+        console.log("Test Initiated");
+        var ret;
+        ret = "SUCCESSFUL Codesheet Api HIT!!!"
+        res.send(ret);
+    })
 }
