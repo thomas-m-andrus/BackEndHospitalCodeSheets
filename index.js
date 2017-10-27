@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 app.use(cors());
 var server = require('./endpoints.js')(app);
 
-var server = app.listen(process.env.PORT || 1337, function(){
+var server = app.listen(process.env.PORT || 3000, function(){
     console.log('Server running at http://127.0.0.1:3000')
 })
 
