@@ -35,4 +35,19 @@ module.exports = function(app){
         ret = "SUCCESSFUL Codesheet Api HIT!!!"
         res.send(ret);
     })
+    app.post('/codesheetapi/multipatient', (req,res) => {
+        var result = [];
+        var ret,index,weight;
+        var data = req.body.patients;
+        index = req.body.index;
+        for (var i=0; i<data.length; i++) {
+            weight = data[i].weight;
+            height = data[i].height;
+            age = data[i].age;
+            ret = cod_comp.convertSheetDBtoWeb(tables,index,weight,height,age);
+            result.push(ret);
+        }
+        res.send(result);
+        console.log("Sent Multi");
+    });
 }

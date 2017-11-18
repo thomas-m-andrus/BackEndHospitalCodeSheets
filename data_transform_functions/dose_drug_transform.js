@@ -59,7 +59,7 @@ module.exports = {
         } else {
             calcDose=drug.drugConstants.hasOwnProperty("drugCalculatedDose") ? drug.drugConstants.drugCalculatedDose : this.GetProperty("drugCalculatedDose",(weight*dosingSuggestion),drug);
         }
-        console.log(drug.drugName + dosingSuggestion + "*" + weight+"=    "+calcDose);
+        //console.log(drug.drugName + dosingSuggestion + "*" + weight+"=    "+calcDose);
         volume=drug.drugConstants.hasOwnProperty("drugVolume") ? drug.drugConstants.drugVolume : this.CalcVolume(calcDose,concentration);
         if(drug.drugInstruction!=null && (drug.drugInstruction.indexOf("|REPLACE|")>=0)){
             switch(drug.drugInstruction){
